@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button>按钮1</button>
+		<button>按钮2</button>
+		<button>按钮3</button>
+		<button>按钮4</button>
+		<button>按钮5</button>
+		<script>
+			var btn = document.getElementsByTagName('button');
+			for (var i = 0; i < btn.length; i++) {
+				btn[i].onclick = function() {
+					for (var i = 0; i < btn.length; i++) {
+						btn[i].style.backgroundColor = '';
+					}
+					this.style.backgroundColor = 'blue';
+				}
+			}
+		</script>
+	</body>
+</html>

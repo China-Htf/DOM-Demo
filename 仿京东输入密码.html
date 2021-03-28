@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				width: 200px;
+				/* border: 1px solid red; */
+				position: relative;
+			}
+			img {
+				width: 24px;
+				height: 18px;
+				position: absolute;
+				right: 1px;
+				top: 1px;
+			}
+			input {
+				
+			}
+		</style>
+	</head>
+	<body>
+		<layer>
+			<img src="images/close.png"/>
+		</layer>
+		<input type="password"/>
+		<script>
+			var flag = 0;
+			var inp = document.querySelector('input');
+			var img = document.querySelector('img');
+			img.onclick = function() {
+				if(flag == 0) {
+					inp.type = 'Text';
+					img.src = "images/open.png";
+					flag = 1;
+				} else {
+					inp.type = 'password';
+					img.src = "images/close.png";
+					flag = 0;
+				}
+			}
+			
+		</script>
+	</body>
+</html>
